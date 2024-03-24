@@ -9,12 +9,12 @@ jobs:
   Fork-FLITER-list:
     runs-on: ubuntu-latest
     env:
-      TZ: "Asia/Shanghai"
+      TZ: "Asia/Ho_Chi_Minh"
     steps:
       - name: Checkout target repository
         uses: actions/checkout@v4
         with:
-          repository: blackspacee/Loon
+          repository: vuong2023/Loon
           path: Loon-repo
 
       - name: Download files to GeoIP
@@ -225,7 +225,7 @@ jobs:
             git config --local user.email "action@github.com"
             git config --local user.name "GitHub Action"
             git add Ruleset/
-            git commit -m "Auto Update $(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M')"
+            git commit -m "Auto Update $(TZ='Asia/Ho_Chi_Minh' date +'%Y-%m-%d %H:%M')"
             git push origin HEAD
           else
             echo "No changes to commit."
