@@ -167,12 +167,12 @@ policy_groups:
     - Đài Loan
     - Lựa chọn Thủ Công
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
- - auto_test:
+- auto_test:
     name: Việt Nam
     policies:
     - Lựa chọn Thủ Công
     flatten: true
-    filter: ^(?=.*((?i)🇻🇳|Việt Nam|(\b(VN|Viet)\b)))(?!.*((?i)Trở về|Trường học|Trò chơi|(\b(GAME)\b))).*$
+    filter: ^(?=.*((?i)🇻🇳|Việt Nam|Hà Nội|Hồ Chí Minh|(\b(VN|VietNam)\b)))(?!.*((?i)Trở về|Trường học|Trò chơi|(\b(GAME)\b))).*$
     tolerance: 50
     icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/VN.png  
 - auto_test:
