@@ -172,7 +172,7 @@ policy_groups:
     policies:
     - Lựa chọn Thủ Công
     flatten: true
-    filter: ^(?=.*((?i)🇻🇳|Việt Nam|Hà Nội|Hồ Chí Minh|(\b(VN|Vietnam)\b)))(?!.*((?i)Trở về|Trường học|Trò chơi|(\b(GAME)\b))).*$
+    filter: ^(?=.*((?i)🇻🇳|Việt Nam|(\b(VN|Viet)\b)))(?!.*((?i)Trở về|Trường học|Trò chơi|(\b(GAME)\b))).*$
     tolerance: 50
     icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/VN.png  
 - auto_test:
@@ -236,7 +236,7 @@ rules:
     policy: Microsoft
 - rule_set:
     match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/YouTube.yaml
-    policy: Microsoft
+    policy: Google
 - rule_set:
     match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/Google.yaml
     policy: Microsoft
