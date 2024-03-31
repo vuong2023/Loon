@@ -172,7 +172,7 @@ policy_groups:
     policies:
     - Lựa chọn Thủ Công
     flatten: true
-    filter: ^(?=.*((?i)🇻🇳|Việt Nam|Hà Nội|Hồ Chí Miinh(\b(VN|Vietnam)\b)))(?!.*((?i)Trở về Việt|Trường học|Trò chơi|(\b(GAME)\b))).*$
+    filter: ^(?=.*((?i)🇻🇳|Việt Nam|Hà Nội|Hồ Chí Minh|(\b(VN|Vietnam)\b)))(?!.*((?i)Trở về|Trường học|Trò chơi|(\b(GAME)\b))).*$
     tolerance: 50
     icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/VN.png  
 - auto_test:
@@ -180,7 +180,7 @@ policy_groups:
     policies:
     - Lựa chọn Thủ Công
     flatten: true
-    filter: ^(?=.*((?i)🇭🇰|Hồng Kông|(\b(HK|Hong)\b)))(?!.*((?i)Trở về Việt|Trường học|Trò chơi|(\b(GAME)\b))).*$
+    filter: ^(?=.*((?i)🇭🇰|Hồng Kông|(\b(HK|Hong)\b)))(?!.*((?i)Trở về|Trường học|Trò chơi|(\b(GAME)\b))).*$
     tolerance: 50
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
 - auto_test:
@@ -188,7 +188,7 @@ policy_groups:
     policies:
     - Lựa chọn Thủ Công
     flatten: true
-    filter: ^(?=.*((?i)🇺🇸|Hoa Kỳ|Portland|Dallas|Oregon|Phoenix|Fremont|Thung lũng Silicon|Las Vegas|Los Angeles|San Jose|Santa Clara|Seattle|Chicago|(\b(US|United States)\b)))(?!.*((?i)Trở về Việt|Trường học|Trò chơi|(\b(GAME)\b))).*$
+    filter: ^(?=.*((?i)🇺🇸|Hoa Kỳ|Portland|Dallas|Oregon|Phoenix|Fremont|Thung lũng Silicon|Las Vegas|Los Angeles|San Jose|Santa Clara|Seattle|Chicago|(\b(US|United States)\b)))(?!.*((?i)Trở về|Trường học|Trò chơi|(\b(GAME)\b))).*$
     tolerance: 50
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
 - auto_test:
@@ -196,7 +196,7 @@ policy_groups:
     policies:
     - Lựa chọn Thủ Công
     flatten: true
-    filter: ^(?=.*((?i)🇸🇬|Singapore|Singapura|(\b(SG|Singapore)\b)))(?!.*((?i)Trở về Việt|Trường học|Trò chơi|(\b(GAME)\b))).*$
+    filter: ^(?=.*((?i)🇸🇬|Singapore|Singapura|(\b(SG|Singapore)\b)))(?!.*((?i)Trở về|Trường học|Trò chơi|(\b(GAME)\b))).*$
     tolerance: 50
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
 - auto_test:
@@ -204,7 +204,7 @@ policy_groups:
     policies:
     - Lựa chọn Thủ Công
     flatten: true
-    filter: ^(?=.*((?i)🇯🇵|Nhật Bản|Kawahi|Tokyo|Osaka|Izumi|Saitama|(\b(JP|Japan)\b)))(?!.*((?i)Trở về Việt|Trường học|Trò chơi|(\b(GAME)\b))).*$
+    filter: ^(?=.*((?i)🇯🇵|Nhật Bản|Kawahi|Tokyo|Osaka|Izumi|Saitama|(\b(JP|Japan)\b)))(?!.*((?i)Trở về|Trường học|Trò chơi|(\b(GAME)\b))).*$
     tolerance: 50
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
 - auto_test:
@@ -212,7 +212,7 @@ policy_groups:
     policies:
     - Lựa chọn Thủ Công
     flatten: true
-    filter: ^(?=.*((?i)🇹🇼|Đài Loan|(\b(TW|Tai|Taiwan)\b)))(?!.*((?i)Trở về Việt|Trường học|Trò chơi|(\b(GAME)\b))).*$
+    filter: ^(?=.*((?i)🇹🇼|Đài Loan|(\b(TW|Tai|Taiwan)\b)))(?!.*((?i)Trở về|Trường học|Trò chơi|(\b(GAME)\b))).*$
     tolerance: 50
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China.png
 rules:
