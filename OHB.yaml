@@ -1,0 +1,337 @@
+# Tên cấu hình: Cấu hình Stash
+# Thời gian cập nhật: 24-04-06 22:04
+
+# Thông tin đăng ký
+subscribe-url: Liên kết đăng ký # 🧸
+
+# Nút đăng ký
+proxy-providers:
+  OHB:
+    url: Liên kết đăng ký # 🧸
+    interval: 3600
+
+# Mức đăng nhập
+log-level: info
+
+# chế độ đi
+mode: rule
+
+# Cấu hình máy chủ DNS
+dns:
+  enable: true
+  ipv6: false
+  listen: 0.0.0.0:53
+# Máy chủ DNS thông thường
+  default-nameserver:
+    - 8.8.4.4  
+    - 223.5.5.5
+    - 119.29.29.29
+# Máy chủ DNS được mã hóa
+  nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+
+# Chế độ nâng cao: FAKE-IP hoặc REDIR-HOST
+  enhanced-mode: fake-ip
+
+# FAKE-IP phạm vi
+  fake-ip-range: 198.18.0.1/16
+# FAKE-IP lọc
+  fake-ip-filter:
+    - '*.lan'
+    - '*.linksys.com'
+    - '*.linksyssmartwifi.com'
+    - 'swscan.apple.com'
+    - 'mesu.apple.com'
+    - '*.msftconnecttest.com'
+    - '*.msftncsi.com'
+    - 'time.*.edu.cn'
+    - '*.time.edu.cn'
+    - '*.ntp.org.cn'
+    - '+.pool.ntp.org'
+    - 'time1.cloud.tencent.com'
+    - '+.music.163.com'
+    - '*.126.net'
+    - 'musicapi.taihe.com'
+    - 'music.taihe.com'
+    - 'songsearch.kugou.com'
+    - 'trackercdn.kugou.com'
+    - '*.kuwo.cn'
+    - 'api-jooxtt.sanook.com'
+    - 'api.joox.com'
+    - 'joox.com'
+    - '+.y.qq.com'
+    - '+.music.tc.qq.com'
+    - 'aqqmusic.tc.qq.com'
+    - '+.stream.qqmusic.qq.com'
+    - '*.xiami.com'
+    - '+.music.migu.cn'
+    - '+.srv.nintendo.net'
+    - '+.stun.playstation.net'
+    - 'xbox.*.microsoft.com'
+    - '+.xboxlive.com'
+    - 'localhost.ptlogin2.qq.com'
+    - 'proxy.golang.org'
+    - 'stun.*.*'
+    - 'stun.*.*.*'
+    - '*.mcdn.bilivideo.cn'
+
+# Nhóm chính sách đại lý
+proxy-groups:
+  - name: Hãy lựa chọn của riêng bạn
+    icon: https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Gallery/Color/Static.png
+    interval: 120
+    lazy: true
+    type: select
+    url: http://cp.cloudflare.com/generate_204
+    include-all: true
+    hidden: null
+
+  - name: Dịch Vụ Apple
+    icon: https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Gallery/Color/Apple-2.png
+    type: select
+    proxies: &proxies
+      - DIRECT
+      - Hãy lựa chọn của riêng bạn
+      - Tự động 
+	  - Máy Chủ Việt Nam
+      - Máy Chủ Hồng Kông
+      - Máy Chủ Đài Loan
+      - Máy Chủ Nhật Bản
+      - Máy Chủ Hàn Quốc
+      - Máy Chủ Singapore
+      - Máy Chủ Hoa Kỳ
+    hidden: null
+
+  - name: Phim truyền hình Hồng Kông và Đài Loan
+    icon: https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Gallery/Color/StreamingSE.png
+    type: select
+    proxies: &proxies
+      - DIRECT
+      - Hãy lựa chọn của riêng bạn
+      - Tự động 
+	  - Máy Chủ Việt Nam
+      - Máy Chủ Hồng Kông
+      - Máy Chủ Đài Loan
+      - Máy Chủ Nhật Bản
+      - Máy Chủ Hàn Quốc
+      - Máy Chủ Singapore
+      - Máy Chủ Hoa Kỳ
+    hidden: null
+
+  - name: Truyền thông trong nước
+    icon: https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Gallery/Color/StreamingCN.png
+    type: select
+    proxies: &proxies
+      - DIRECT
+      - Hãy lựa chọn của riêng bạn
+      - Tự động 
+	  - Máy Chủ Việt Nam
+	  - Máy Chủ Hồng Kông
+      - Máy Chủ Đài Loan
+      - Máy Chủ Nhật Bản
+      - Máy Chủ Hàn Quốc
+      - Máy Chủ Singapore
+      - Máy Chủ Hoa Kỳ
+    hidden: null
+
+  - name: Truyền thông quốc tế
+    icon: https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Gallery/Color/Streaming.png
+    type: select
+    proxies: &proxies
+      - Hãy lựa chọn của riêng bạn
+      - Tự động 
+      - DIRECT
+      - Máy Chủ Việt Nam
+	  - Máy Chủ Hồng Kông
+      - Máy Chủ Đài Loan
+      - Máy Chủ Nhật Bản
+      - Máy Chủ Hàn Quốc
+      - Máy Chủ Singapore
+      - Máy Chủ Hoa Kỳ
+    hidden: null
+
+  - name: Tăng tốc toàn cầu
+    icon: https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Gallery/Color/Global.png
+    type: select
+    proxies: &proxies
+      - Hãy lựa chọn của riêng bạn
+      - Tự động 
+      - DIRECT
+      - Máy Chủ Việt Nam
+	  - Máy Chủ Hồng Kông
+      - Máy Chủ Đài Loan
+      - Máy Chủ Nhật Bản
+      - Máy Chủ Hàn Quốc
+      - Máy Chủ Singapore
+      - Máy Chủ Hoa Kỳ
+    hidden: null
+
+  - name: Danh sách đen trắng
+    icon: https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Gallery/Color/Final.png
+    type: select
+    proxies: &proxies
+      - Hãy lựa chọn của riêng bạn
+      - Tự động 
+      - DIRECT
+      - Máy Chủ Việt Nam
+	  - Máy Chủ Hồng Kông
+      - Máy Chủ Đài Loan
+      - Máy Chủ Nhật Bản
+      - Máy Chủ Hàn Quốc
+      - Máy Chủ Singapore
+      - Máy Chủ Hoa Kỳ
+    hidden: null
+
+  - name: Tự động
+    icon: https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Gallery/Color/Available.png
+    interval: 1800
+    lazy: true
+    tolerance: 50
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    include-all: true
+    hidden: null
+
+  - name: Máy Chủ Việt Nam
+    filter: "Việt Nam|Hà Nội|Hồ Chí Minh|VN|🇻🇳|(?i)Vietnam"
+    icon: https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Gallery/Color/VN.png
+    interval: 1800
+    lazy: true
+    tolerance: 50
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    include-all: true
+    hidden: null
+
+  - name: Máy Chủ Hồng Kông
+    filter: "Hồng Kông|HK|🇭🇰|(?i)Hong"
+    icon: https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Gallery/Color/HK.png
+    interval: 1800
+    lazy: true
+    tolerance: 50
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    include-all: true
+    hidden: null
+
+  - name: Máy Chủ Đài Loan
+    filter: "Đài Loan|Đài|TW|🇹🇼|(?i)Taiwan"
+    icon: https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Gallery/Color/TW.png
+    interval: 1800
+    lazy: true
+    tolerance: 50
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    include-all: true
+    hidden: null
+
+  - name: Máy Chủ Nhật Bản
+    filter: "Nhật Bản|Nhật|JP|🇯🇵|(?i)Japan"
+    icon: https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Gallery/Color/JP.png
+    interval: 1800
+    lazy: true
+    tolerance: 50
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    include-all: true
+    hidden: null
+
+  - name: Máy Chủ Hàn Quốc
+    filter: "Hàn Quốc|Hàn|KR|🇰🇷|(?i)Korea"
+    icon: https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Gallery/Color/KR.png
+    interval: 1800
+    lazy: true
+    tolerance: 50
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    include-all: true
+    hidden: null
+
+  - name: Máy Chủ Singapore
+    filter: "Singapore|Sing|SG|🇸🇬|(?i)Singapore"
+    icon: https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Gallery/Color/SG.png
+    interval: 1800
+    lazy: true
+    tolerance: 50
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    include-all: true
+    hidden: null
+
+  - name: Máy Chủ Hoa Kỳ
+    filter: "Hoa Kỳ|Mỹ|US|🇺🇸|(?i)States"
+    icon: https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Gallery/Color/US.png
+    interval: 1800
+    lazy: true
+    tolerance: 50
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    include-all: true
+    hidden: null
+
+# 分流规则
+rules:
+  # SCRIPT,quic,REJECT,no-track
+  - RULE-SET, Sửa đổi quy tắc, DIRECT
+  - RULE-SET, Chặn quảng cáo, REJECT
+  - RULE-SET, Truyền thông quốc tế, Truyền thông quốc tế
+  - RULE-SET, Phim truyền hình Hồng Kông và Đài Loan, Phim truyền hình Hồng Kông và Đài Loan
+  - RULE-SET, Truyền thông trong nước, Truyền thông trong nước
+  - RULE-SET, Tăng tốc toàn cầu, Tăng tốc toàn cầu
+  - RULE-SET, Dịch Vụ Apple, Dịch Vụ Apple
+  - RULE-SET, Mạng cục bộ, DIRECT
+  - RULE-SET, Nội quy, DIRECT
+  - MATCH,Danh sách đen trắng
+
+# 远程规则
+rule-providers:
+  Sửa đổi quy tắc:
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Stash/Ruleset/Unbreak.yaml
+
+  Chặn quảng cáo:
+    behavior: domain
+    interval: 86400
+    url: https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Stash/Ruleset/AdBlock.yaml
+
+  Truyền thông quốc tế:
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Stash/Ruleset/Streaming.yaml
+
+  Phim truyền hình Hồng Kông và Đài Loan:
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Stash/Ruleset/StreamingSE.yaml
+
+  Truyền thông trong nước:
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Stash/Ruleset/StreamingCN.yaml
+
+  Tăng tốc toàn cầu:
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Stash/Ruleset/Global.yaml
+
+  Dịch Vụ Apple:
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Stash/Ruleset/Apple.yaml
+
+  Mạng cục bộ:
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Stash/Ruleset/LAN.yaml
+
+  Nội quy:
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Stash/Ruleset/GEOIPCN.yaml
+
+# Script
+script:
+  shortcuts:
+    quic: network == 'udp' and (dst_port == 443 or dst_port == 4483 or dst_port == 9305)
