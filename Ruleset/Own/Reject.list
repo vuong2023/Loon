@@ -1247,7 +1247,7 @@ DOMAIN,118.89.204.198
 # > ZOL
 DOMAIN,apppv.zol.com.cn
 DOMAIN,pvnapp.zol.com.cn##########################
-  
+404: Not Found  
 # Privacy
 DOMAIN-SUFFIX,adjust.com
 DOMAIN-SUFFIX,airpr.com
