@@ -1,24 +1,41 @@
-vif_only: true
+# [Cài đặt cổng]
+http_port: 8200      # HTTP  cổng giao thức
+socks_port: 8300     # SOCKS cổng giao thức
+
+# [Cấu hình Toàn cầu]
+vif_only: true       # Chế độ tiếp quản
 hijack_dns:
 - '*:53'
-geoip_db_url: https://raw.githubusercontent.com/Masaiki/GeoIP2-CN/release/Country.mmdb
-include_all_networks: true
-include_apns: true
-dns_servers:
-- 8.8.4.4
-- 45.90.28.15
-- 119.29.29.29
-- 233.5.5.5
-hosts:
-  dot.pub: 1.12.12.12
-  dns.alidns.com: 223.5.5.5
-  doh.pub: 1.12.12.12
-secure_dns:
-  servers:
-  - https://dns.alidns.com/dns-query
-  - https://doh.pub/dns-query
-  ecs: false
-  public_ip_lookup_url: ''
+compat_route: false  # Chế độ tương thích
+hide_vpn_icon: false # Biểu tượng ẩn
+allow_external_connections: false
+
+# [mạng hệ thống]
+include_all_networks: false
+include_apns: false
+include_cellular_services: false
+include_local_networks: false
+
+# [cài đặt ĐỊA LÝ GEO]
+geoip_db_url: https://github.com/Masaiki/GeoIP2-CN/raw/release/Country.mmdb
+
+# [cài đặt DNS]
+dns:
+  bootstrap:
+    - 8.8.4.4
+    - 45.90.28.15
+    - 119.29.29.29
+    - 233.5.5.5
+  upstreams:
+    SecureDNS:
+      - https://doh.pub/dns-query
+      - https://dns.alidns.com/dns-query
+  forward:
+    - wildcard:
+        match: '*'
+        value: SecureDNS
+  public_ip_lookup_url: https://ifconfig.me/ip
+
 proxies:
 - vmess:
     name: ☯🅞🅗🅑☯-Happynew2024
