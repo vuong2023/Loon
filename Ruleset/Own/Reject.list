@@ -1,4 +1,4 @@
-# 2024-07-21 21:35
+# 2024-08-02 16:45
 
 # ======= A ======= #
 # 阿里巴巴
@@ -84,7 +84,6 @@ DOMAIN,pagead2.googlesyndication.com
 DOMAIN,sdk.e.qq.com
 DOMAIN,ws.tapjoyads.com
 DOMAIN,www.googleadservices.com
-DOMAIN,xlog.jd.com
 DOMAIN-SUFFIX,ads.linkedin.com
 DOMAIN-SUFFIX,ads.vungle.com
 DOMAIN-SUFFIX,adservice.google.com
@@ -122,6 +121,10 @@ IP-CIDR6,2402:db40:5100:1011::5/128,no-resolve
 # JavDB
 DOMAIN,api.liquidlink.cn
 # ======= K ======= #
+# 酷狗音乐
+DOMAIN,ads.service.kugou.com
+DOMAIN,adserviceretry.kglink.cn
+DOMAIN,adserviceretry.kugou.com
 # 酷我音乐
 DOMAIN,ad.tencentmusic.com
 DOMAIN,g.koowo.com
@@ -206,6 +209,8 @@ DOMAIN,huodong.weibo.cn
 DOMAIN-SUFFIX,biz.weibo.com
 # 微信
 DOMAIN,badjs.weixinbridge.com
+DOMAIN,dns.weixin.qq.com.cn
+DOMAIN-SUFFIX,wxs.qq.com
 # ======= X ======= #
 # 小米
 DOMAIN,sdkconfig.ad.xiaomi.com
@@ -1193,8 +1198,6 @@ DOMAIN,wa.gtimg.com
 # DOMAIN,wxsnsdythumb.wxs.qq.com
 # > Tencent Music (TME)
 DOMAIN,adstats.tencentmusic.com
-DOMAIN,adserviceretry.kugou.com
-DOMAIN,ads.service.kugou.com
 DOMAIN,adsfile.bssdlbig.kugou.com
 DOMAIN,kgmobilestat.kugou.com
 DOMAIN,kgmobilestatbak.kugou.com
